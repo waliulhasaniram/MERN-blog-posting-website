@@ -1,0 +1,259 @@
+#root {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  
+}
+.footer {
+  width: 100%;
+  height: 100px;
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(20, 113, 184); 
+  
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+/* home page */
+.heroImage{
+  width: 400px;
+  height: 400px;
+}
+
+.hero_section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 50px;
+}
+.hero_info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.hero_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact_section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 30px;
+  background-color: rgb(56, 55, 55);
+}
+.hero_button1{
+width: 200px;
+border-radius: 8px;
+border: 1px solid transparent;
+padding: 0.6em 1.2em;
+font-size: 1em;
+font-weight: 500;
+font-family: inherit;
+background-color: #1a1a1a;
+cursor: pointer;
+transition: border-color 0.25s;
+background-color: #393e83;
+}
+.hero_button2{
+  width: 200px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin-left: 10px;
+}
+.hero_tech{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #1a1a1a;
+  border-radius: 30px;
+  border:2px solid #646cff;
+}
+
+/* register and login css*/
+
+.reg_container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid rgb(156, 154, 154);
+  border-radius: 30px;
+}
+
+.regImage{
+  border-radius: 20px;
+  box-shadow: 10px 10px gray;
+}
+.input_div {
+  margin: 20px;
+  
+}
+input{
+  width: 400px;
+  height: 35px;
+  font-size: 17px; 
+}
+textarea{
+  width: 400px;
+  height: 100px;
+  font-size: 17px; 
+}
+h1{
+  text-align: center;
+}
+
+/* profile */
+.prfile_data{
+  display: flex;
+}
+.prfile_data h2{
+  margin-left: 20px;
+}
+
+
+/* blogwrite */
+
+.start_write{
+  margin: 20px;
+}
+.blogWrite_div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* blog card */
+.blog_section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+}
+.blog_card {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(78, 78, 77);
+  margin: 10px;
+  border: 2px rgb(38, 135, 214) solid;
+  border-radius: 20px;
+}
+
+.blog_card_head {
+  height: 30%;
+  background-color: rgb(51, 51, 50);
+  border-radius: 20px 20px 0px 0px;
+  padding-left: 20px;
+}
+
+.blog_card p{
+  height: 50px;
+  padding: 20px;
+}
+
+/* admin css */
+
+.adminUser{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.adminUserTable{
+  width: 50%;
+  text-align: center;
+  background-color: #393e83;
+}
+
+/* single blog  */
+.blog_container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 30px;  
+  margin-bottom: 100px;
+  margin: 100px;
+  border: 2px solid rgb(156, 154, 154);
+  border-radius: 30px;
+}
+
+.blog_container button{
+  margin: 10px;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+
+/* from modile screen */
+@media (max-width: 853px) {
+  .reg_container {
+    display: flex;
+    justify-content: space-around;
+    border: none;
+  }
+  .reg_container input {
+    width: 300px;
+  }
+  .reg_container textarea{
+    width: 300px;
+  }
+  .reg_container h1{
+    font-size: 30px;
+  }
+  .reg_container button {
+    margin-left: 90px;
+  }
+  .adminH1{
+    font-size: 25px;
+  }
+  .adminUser{
+    overflow-x: scroll;
+  }
+}

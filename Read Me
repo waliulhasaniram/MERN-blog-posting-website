@@ -1,0 +1,84 @@
+server>>
+step 1: set up the server
+      all packages : npm i bcryptjs cors dotenv express jsonwebtoken mongoose nodemon validator zod  
+step 2: make router and controller
+
+step 3: make auth-model and util->db. then connect with database
+
+step 4: make register route then register controller
+step 5: do password hashing and generate token in auth-model
+
+step 6:  make login route then login controller
+
+step 7: zod validation >>>
+
+    # step 1: zod Schema -> auth-validator
+
+    # strp 2: validate function (double arrow)
+
+    # step 3: add validate(Schema) in the router page
+
+step 8:  error handling
+    # step 1 : create a errorMiddleware function
+    # step 2 : use it in the main file like >> 'app.use(errorMiddleware)' in the "server.js"
+    # step 3 : call next(error) in a catch block of the 'validate-middleware'
+    
+step 9: creat model, router, controller for contact data and do the zod validation
+step 10: creat model, router, controller for services data
+
+step 11: make route and controller and model for blog to write log. 
+step 12: get the logged in user data and show the logged in users blog in his profile
+
+/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
+
+Frontend-> Client >>
+step 1: instal the react app --> npm create vite@latest
+step 2: make all the pages, nav bar and route
+
+step 3: get the data from the inputs of (register, login, contact) in useState hook
+
+step 4: connect the backend and Frontend using the cors
+step 5: save data from the Frontend page(registration, login, contact) to the database by calling the route
+
+step 6: make a context API in auth.js 
+step 7: store the token in local storage inside the context API
+
+step 8: user authentication
+    # step 1 : make a '/user' route in auth-router.js
+
+    # step 2 : make a user function in auth-controller.js
+
+    # step 3 make authMiddleware in auth-middleware.js >> then call the authMiddleware in the auth-router.js
+
+    # step 4 : make a userAuthentication function in auth.jsx for user Authentication 
+
+    # step 5 : pass userAuthentication in useEffect()
+
+step 9: make the LogoutUser function in auth.jsx for logout  
+
+step 10: make a "serviceData" function to get service data from database and pass the "serviceData" in useEffect
+step 11: save the service data in a useState in auth.js
+
+/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
+Admin page
+
+step 1: make Nested Route in App.jsx 
+step 2 : make all the admin pages 
+step 3 : make Admin-layout and make 'Navbar' at the end use <Outlet/>
+
+step 4 : write 'app.use('/api/admin', adminRouter)' in server
+step 5 : make router, controller in the server for the admin and get the data
+
+step 6 : make getAllUserData function to fetch all user data in admin-user.jsx, then pass the function in useEffect
+step 7 : do the same as step 6 for admin-contact
+
+step 8: make router, controller for deleting one user and make a function in Admin-user to delete
+step 9: do the same as step 8 for admin-contact
+
+step 10 : for updating user data
+    # step 1 : make router "users/:id" and a controller to get a users data from backend
+    # step 2 : make a Route "users/:id/edit" in app.js to go to the Admin-update.jsx 
+    # step 3 : fetch the link of step1 in getSingleUserData in Admin-upadate and put them in a useState and set them in the update input fields
+    # step 4 : pass the getSingleUserData function to useEffect
+    # step 5 : make a router "users/update/:id" and a controller. then fetch the link in handelSubmit to update 
+
